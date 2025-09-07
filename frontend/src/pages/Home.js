@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [posts, setPosts] = useState([])
   const user = JSON.parse(localStorage.getItem('user'))
-  console.log(user);
   const navigate = useNavigate();
 
   const fetchPosts = async () => {
@@ -23,8 +22,10 @@ const Home = () => {
     fetchPosts();
   }, [])
 
+
   return (
     <div>
+      
       { posts.length > 0 && <h2>All Posts</h2>}
       {posts.length > 0 ? posts.map(post => (
         <div key={post._id} className="card mb-3">
@@ -43,6 +44,7 @@ const Home = () => {
       )) : <div className="spinner-border" role="status">
         <span className="visually-hidden">Loading...</span>
       </div>}
+            
     </div>
   )
 }

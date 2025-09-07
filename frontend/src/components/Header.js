@@ -12,8 +12,6 @@ const Header = () => {
   return (
  <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
       <Link className="navbar-brand" to="/">My Blog Site</Link>
-
-      {/* Hamburger menu toggle button for mobile */}
       <button
         className="navbar-toggler"
         type="button"
